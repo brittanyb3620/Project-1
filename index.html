@@ -52,27 +52,135 @@
         </div>
     </section>
 <!-- Container under gallery -->
-<div class="hodnotenie-container">
-</div>
- 
-
-<!--Carousel-->
-<div class="image-carousel">
-    <h1>other penzion options</h1>
-    <div class="carousel-track">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
-        <!-- Duplicate images for seamless looping -->
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image2.jpg" alt="Image 2">
-        <img src="image3.jpg" alt="Image 3">
-        <img src="image4.jpg" alt="Image 4">
-        <img src="image5.jpg" alt="Image 5">
+    <div class="hodnotenie-container">
+        <!--I want to create a hotel booking widget for my website. It should allow users to select check-in and check-out dates, choose the number of guests from a dropdown, and have a button to check availability. Don't worry about styling it. What would a general html structure look like?-->
+        <div class="availability-widget">
+            <h2>Pridajte dátumy a uvidíte ceny</h2>
+            
+            <div class="availability-form">
+                <div class="date-selection">
+                    <div class="date-field">
+                        <label for="arrival"><strong>PRÍCHOD</strong></label>
+                        <input type="date" id="arrival" name="arrival">
+                    </div>
+                    <div class="date-field">
+                        <label for="departure"><strong>ODCHOD</strong></label>
+                        <input type="date" id="departure" name="departure">
+                    </div>
+                </div>
+        
+                <div class="guests-selection">
+                    <label for="guests"><strong>HOSTIA</strong></label>
+                    <select id="guests" name="guests">
+                        <option value="1">1 hosť</option>
+                        <option value="2">2 hostia</option>
+                        <option value="3">3 hostia</option>
+                        <option value="4">4 hostia</option>
+                        <option value="5">5+ hostí</option>
+                    </select>
+                </div>
+        
+                <button type="submit">Skontrolovať dostupnosť</button>
+            </div>
+        
+        </div>
+        
     </div>
-</div>
+
+ 
+<!-- Featured Parks Section -->
+<section class="section bg-light">
+    <div class="container-for-cards">
+        <div class="section-header">
+            <h2>Section Title</h2>
+            <p>Discover our featured national parks</p>
+        </div>
+
+        <!-- Scrollable Card Container -->
+        <div class="park-cards">
+            
+            <!-- First Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1565030784130-0e0ef4b06b7e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Canyon scene of Yellowstone">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Yellowstone</h3>
+                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <span class="card-location">Location: Wyoming</span>
+                    <div class="card-button-layout">
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Mountain in Yosemite">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Yosemite</h3>
+                    <p>Famous for its towering cliffs, waterfalls, and giant sequoia trees.</p>
+                    <span class="card-location">Location: California</span>
+                    <div class="card-button-layout">
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1517460816455-179b84b9f9a3?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Rock formations at Grand Canyon">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Grand Canyon</h3>
+                    <p>A breathtaking natural wonder carved by the Colorado River.</p>
+                    <span class="card-location">Location: Arizona</span>
+                    <div class="card-button-layout">
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+<!--Fourth Card!-->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1565030784130-0e0ef4b06b7e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Canyon scene of Yellowstone">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Yellowstone</h3>
+                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <span class="card-location">Location: Wyoming</span>
+                    <div class="card-button-layout">
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+<!--Fifth Card!-->
+            <div class="card">
+                <div class="card-image">
+                    <img src="https://images.unsplash.com/photo-1565030784130-0e0ef4b06b7e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Canyon scene of Yellowstone">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Yellowstone</h3>
+                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <span class="card-location">Location: Wyoming</span>
+                    <div class="card-button-layout">
+                        <button class="btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End .park-cards -->
+
+    </div>
+</section>
 
 
 
