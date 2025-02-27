@@ -68,9 +68,11 @@ nav {
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: flex-start;
-	gap: 10px; 
+	gap: 40px; 
 	align-items: stretch;
 	align-items: center;
+    border-style:solid;
+    border-color:aqua;
 }
 
 /* Main Image */
@@ -94,10 +96,6 @@ border-radius:10px;
 object-fit:cover;
 }
 .container img:hover {
-
-/* originally I had background color and I asked chatgpt why it wasn't working. It suggested this instead: */
-/* originally I had background color and I asked chatgpt why it wasn't working. It suggested this instead */
-
 /* originally I had background color and I asked chatgpt why it wasn't working. It suggested this instead: */
     filter: brightness(70%);
     transition: 0.3s ease-in-out; 
@@ -110,19 +108,30 @@ object-fit:cover;
 	display: flex;
 	flex-wrap: wrap; 
 	justify-content: space-between; 
-		flex-wrap:wrap;
-		width: 40%;
-		border-style:solid;
-	
-	
+	flex-wrap:wrap;
+	width: 40%;	
 }
 .text-container {
     width: 100%; /* Matches the main image width */
     padding: 10px; /* Adds spacing around the text */
     background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
-    text-align: center; /* Centers text */
+    text-align: left; 
     border-radius: 10px;
     margin-top: 10px; 
+}
+.hodnotenie-container{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: left;
+	display: flex;
+	flex-wrap:wrap;
+	gap: 10px; 
+	align-items: stretch;
+	align-items: center;
+    border-style:solid;
+    height:300px;
+    margin:auto;
 }
 /* Footer */
 footer {
