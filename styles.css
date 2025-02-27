@@ -65,11 +65,15 @@ nav {
     max-width: 1100px;
     margin: auto;
     text-align: left;
+	border-color:pink;
+	border-width:10px;
+	border-style:solid;
 	display: flex;
 	flex-wrap:wrap;
 	justify-content: flex-start;
 	gap: 10px; 
 	align-items: stretch;
+	align-items: center;
 }
 
 /* Main Image */
@@ -86,6 +90,7 @@ nav {
 
 .container img{
 width: 50%;
+height: auto;
 height:auto;
 border-radius: 10px;
 padding:5px;
@@ -93,7 +98,10 @@ border-radius:10px;
 object-fit:cover;
 }
 .container img:hover {
+
 /* originally I had background color and I asked chatgpt why it wasn't working. It suggested this instead: */
+/* originally I had background color and I asked chatgpt why it wasn't working. It suggested this instead */
+
     filter: brightness(70%);
     transition: 0.3s ease-in-out; 
 }
@@ -107,6 +115,7 @@ object-fit:cover;
 	justify-content: space-between; 
 		flex-wrap:wrap;
 		width: 40%;
+
 }
 .text-container {
     width: 100%; /* Matches the main image width */
@@ -207,4 +216,8 @@ footer {
 @keyframes step-scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-1050px); } /* Moves left by full row width */
+}
+		border-style:solid;
+	
+	
 }
