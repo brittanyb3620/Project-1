@@ -14,7 +14,7 @@ body {
 /* Navigation Bar */
 nav {
     position: relative;
-    background-color:lime;
+    background-color:#522c2c;
     padding: 1rem;
     z-index: 10;
     width: 100%;
@@ -34,8 +34,10 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: bold;
+    font-family: 'Aboreto', cursive;
+    color:white;
 }
 
 .logo img {
@@ -49,15 +51,20 @@ nav {
 }
 
 .nav-links a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Aboreto', cursive;
 }
 
 /* Gallery Section */
 .gallery-section {
     text-align: center;
     padding: 2rem 0;
+}
+.gallery-section h1{
+    font-size:65px;
+    font-family: 'Aboreto', cursive;
 }
 
 .gallery-container {
@@ -71,8 +78,7 @@ nav {
 	gap: 40px; 
 	align-items: stretch;
 	align-items: center;
-    border-style:solid;
-    border-color:aqua;
+
 }
 
 /* Main Image */
@@ -114,46 +120,117 @@ object-fit:cover;
 .text-container {
     width: 100%; /* Matches the main image width */
     padding: 10px; /* Adds spacing around the text */
-    background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
     text-align: left; 
     border-radius: 10px;
     margin-top: 10px; 
 }
-.hodnotenie-container{
+
+/* REVIEW AND CALENDAR SECTION */
+/* Container for review and for the calendar widget l */
+.hodnotenie-container {
     width: 90%;
     max-width: 1100px;
     margin: auto;
-    text-align: left;
-	display: flex;
-	flex-wrap:wrap;
-	gap: 10px; 
-	align-items: stretch;
-	align-items: center;
-    border-style:solid;
-    height:300px;
-    margin:auto;
-    flex-direction:row;
-}
-/* Calendar Widget */
-.availability-widget {
-    width: 50%;
-    max-width: 400px;
+    margin-right:330px;
+    display: flex;
+    justify-content: space-between;    
+    gap: 20px;
     padding: 20px;
+    border-radius: 15px;
+    background: white;
+    flex-wrap: wrap; /* Ensures responsiveness */
+    align-items: center;
+    text-align: center;
+
+}
+
+/* REVIEW CONTAINER */
+.review-container {
+    flex: 1;
+    align-self:flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    min-width: 300px;
+    border-style:solid;
+    border: 1px solid #ddd;
+    border-radius:10px;
+    padding:10px;
+
+}
+
+.review-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds spacing between the icons and text */
+    font-size: 18px;
+    font-weight: bold;
+}
+.review-badge i {
+    font-size: 30px; /* Adjust icon size */
+    color: #2A646E; /* Airbnb-style red */
+}
+.review-text {
+    font-size: 16px;
+    color: #333;
+}
+
+.review-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.review-score {
+    font-size: 22px;
+}
+
+.review-stars {
+    color: gold; /* Adjust for real star icons */
+}
+
+.review-divider {
+    width: 1px;
+    height: 20px;
+    background-color: #ddd;
+}
+
+.review-count a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.review-count a:hover {
+    text-decoration: underline;
+}
+
+/* AVAILABILITY WIDGET */
+.availability-widget {
+    flex: 1; /* Makes it share space with the review container */
+    min-width: 320px; /* Prevents it from getting too small */
+    max-width: 400px;
+    padding: 15px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    height:auto;
-    padding:5px;
-    object-fit:cover;}
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.availability-widget h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
 
 .availability-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    
+    gap: 10px;
 }
 
-/* Style for date selection fields */
 .date-selection {
     display: flex;
     justify-content: space-between;
@@ -161,104 +238,60 @@ object-fit:cover;
 }
 
 .date-field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     flex: 1;
+}
+
+.date-field label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.date-field input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+}
+
+.guests-selection {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-/* Input fields CHATGPT*/
-input[type="date"],
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+.guests-selection label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.guests-selection select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #f5f5f5;
     border-radius: 5px;
 }
 
-/* Button styling */
 button {
-border-radius:8px;
-font-size:16px;
-padding:10px;
-background-color:aqua;}
-
+    background-color: #7b4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 button:hover {
+    background-color: #7b4d4d;
 }
 
-
-/* Footer */
-footer {
-	background-color: lime	;
-	color: white;
-	padding: 2rem 0 1rem;
-}
-
-.footer-container {
-	display: flex;
-	flex-direction: column;
-}
-
-.footer-section {
-	margin-bottom: 2rem;
-}
-
-.footer-section-tag-line {
-	color: #aaa;
-	margin-top: 0.5rem;
-}
-
-.footer-links h3 {
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-}
-
-.footer-links ul {
-	list-style: none;
-}
-
-.footer-links li {
-	margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-	color: #ccc;
-	text-decoration: none;
-}
-
-.social-placeholder {
-	display: flex;
-	gap: 1rem;
-	margin-top: 1rem;
-}
-
-.social-icon {
-	width: 30px;
-	height: 30px;
-	background-color: #666;
-	border-radius: 50%;
-}
-
-.footer-bottom {
-	border-top: 1px solid #555;
-	margin-top: 2rem;
-	padding-top: 1.5rem;
-	text-align: center;
-	font-size: 0.875rem;
-	color: #aaa;
-}
-
-.footer-bottom a {
-	color: #aaa;
-	text-decoration: none;
-	margin: 0 0.5rem;
-}
-/* Parks section */
-.section {
-	padding: 4rem 0;
-}
+/* Other Penzion Options Section*/
 
 .bg-light {
 	background-color: #f5f5f5;
@@ -266,17 +299,17 @@ footer {
 
 .section-header {
 	text-align: center;
-	margin-bottom: 3rem;
 }
 
 .section-header h2 {
 	font-size: 2rem;
-	color: #2c5f2d;
+	color: #2A646E;
 	margin-bottom: 0.5rem;
+    margin-top: 3rem;
 }
 
 
-/* Park cards - Modify this */
+/* Different Options Cards*/
 
  .section {
     width: 100vw;
@@ -292,7 +325,7 @@ footer {
     width: 100vw;
 }
 
-.park-cards {
+.bnb-cards {
     display: flex;
     overflow-x: auto; /* Enables horizontal scrolling */
     scroll-snap-type: x mandatory; /* Enables smooth snapping */
@@ -303,12 +336,12 @@ footer {
 }
 
 /* CHATGPT*/
-.park-cards::-webkit-scrollbar {
+.bnb-cards::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Safari */
 
 }
 
-.park-cards {
+.bnb-cards {
     -ms-overflow-style: none; /* Hides scrollbar in IE, Edge */
     scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
@@ -351,7 +384,7 @@ footer {
 
 /* Small adjustments for responsiveness */
 @media (min-width: 768px) {
-    .park-cards {
+    .bnb-cards {
         overflow-x: auto; /* Keep scrolling effect on wider screens */
     }
 
@@ -361,3 +394,75 @@ footer {
 }
 
 
+/* Footer */
+footer {
+	background-color: #522c2c;
+	color: white;
+	padding: 2rem 0 1rem;
+
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    border-style:solid;
+}
+
+.footer-section {
+	margin-bottom: 2rem;
+}
+
+.footer-section-tag-line {
+	color: #aaa;
+	margin-top: 0.5rem;
+}
+
+.footer-links h3 {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.footer-links ul {
+	list-style: none;
+}
+
+.footer-links li {
+	margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+	color: #ccc;
+	text-decoration: none;
+}
+
+.social-placeholder {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+	background-color: #666;
+	border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer-bottom {
+	border-top: 1px solid #555;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	text-align: center;
+	font-size: 0.875rem;
+	color: #aaa;
+}
+
+.footer-bottom a {
+	color: #aaa;
+	text-decoration: none;
+	margin: 0 0.5rem;
+}
