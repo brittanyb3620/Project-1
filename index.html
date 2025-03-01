@@ -78,6 +78,8 @@
             <span class="review-stars">★★★★★</span>
             <span class="review-divider"></span>
             <span class="review-count">120 <a href="#">hodnotení</a></span>
+            <a href="#rating-form" class="rating-button">Zanechaj hodnotenie</a>
+
         </div>
     </div>
 
@@ -219,22 +221,62 @@
                 </div>
             </div>
 
-        </div> <!-- End .park-cards -->
+        </div> 
 
     </div>
 </section>
 
+<!--Input Form section-->
+<section id="review-section">
+    <!--CHATGPT can you create a layout for a form in html? It needs 5 inputs-->
+    <form id="rating-form">
+        <h2>Ohodnoť svoje ubytovanie</h2>
+        <!-- Star Rating -->
+        <label for="penzion">Vyber penzión, v ktorom si býval:</label>
+        <select id="penzion" name="penzion">
+            <option value="penzion1">Penzión Pod Mývalom</option>
+            <option value="penzion2">Chata Penziónu</option>
+            <option value="penzion3">Starý Penzión</option>
+            <option value="penzion4">Penzión na Kopci</option>
+            <option value="penzion5">Penzión pri Vodopáde</option>
+            <option value="penzion6">Malacky Penzión</option>
+            <option value="penzion7">Penzión Fiľakovo</option>
+        </select>
+ <!--CHATGPT How can I make the inputs sliders on a scale of 1-5??-->
+        <!-- Cleanliness Rating -->
+        <label for="cleanliness">Čistota:</label>
+        <input type="range" id="cleanliness" name="cleanliness" min="1" max="5">
 
+        <!-- Communication Rating -->
+        <label for="communication">Komunikácia hostiteľa:</label>
+        <input type="range" id="communication" name="communication" min="1" max="5">
+
+        <!-- Location Rating -->
+        <label for="location">Lokalita:</label>
+        <input type="range" id="location" name="location" min="1" max="5">
+
+        <!-- Value Rating -->
+        <label for="value">Pomer cena/kvalita:</label>
+        <input type="range" id="value" name="value" min="1" max="5">
+
+        <!-- Review Text -->
+        <label for="review">Napíšte svoju recenziu:</label>
+        <textarea id="review" name="review" rows="4" placeholder="Podeľte sa o svoj zážitok..." required></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit">Odoslať recenziu</button>
+    </form>
+</section>
 
  <!-- Footer -->
     <footer>
             <div class="container">
                 <div class="footer-container">
                     <div class="footer-section">
-                        <div class="logo">Penzion</div>
-                        <p class="footer-section-tag-line">Nieco tu po slovensky</p>
-                    </div>
-    
+                            <div class="logo">
+            <img src="./Heartlogo.png" alt="Logo">
+            <h1>Penzióny na Slovensku</h1>
+        </div>
                     <div class="footer-section footer-links">
                         <h3>Pozri nas na socialnych sietach</h3>
 
@@ -261,12 +303,13 @@
                 </div>
     
                 <div class="footer-bottom">
-                    <p>©Penzion company meno</p>
+                    <p>©Penziony na Slovensku</p>
                     <div>
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
-        <!--CHATGPT What would the html look like for a back to top button? don't worry about styling it.-->
-                        <a href="#" id="back-to-top">Back to Top</a>
+        <!--CHATGPT How do I make my back to top button smooth as well?-->
+        <a href="#" class="back-to-top">↑ Hore</a>
+
                     </div>
                 </div>
             </div>

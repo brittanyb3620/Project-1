@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: sans-serif;
@@ -43,6 +46,7 @@ nav {
 .logo img {
     width: 60px;
     height: auto;
+
 }
 
 .nav-links {
@@ -56,13 +60,13 @@ nav {
     font-weight: bold;
     font-family: 'Aboreto', cursive;
 }
-/* Keep "Kontakt" looking like a normal nav link */
+/*CHATGPT What does css look like typically for a dropdown menu?*/
 .nav-links .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown menu hidden by default */
+/*Dropdown menu*/
 .dropdown-content {
     display: none;
     position: absolute;
@@ -70,8 +74,9 @@ nav {
     min-width: 160px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%; /* Ensures the dropdown appears below "Kontakt" */
+    top: 100%; 
     left: 0;
+    font-family: inherit;
 }
 
 /* Dropdown links */
@@ -85,7 +90,7 @@ nav {
 
 /* Hover effect for dropdown links */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #f5f5f5;
 }
 
 /* Show dropdown on hover */
@@ -163,7 +168,7 @@ object-fit:cover;
 }
 
 /* REVIEW AND CALENDAR SECTION */
-/* Container for review and for the calendar widget l */
+/* Container for review and for the calendar widget */
 .hodnotenie-container {
     width: 90%;
     max-width: 1100px;
@@ -175,7 +180,7 @@ object-fit:cover;
     padding: 20px;
     border-radius: 15px;
     background: white;
-    flex-wrap: wrap; /* Ensures responsiveness */
+    flex-wrap: wrap; 
     align-items: center;
     text-align: center;
 
@@ -191,7 +196,7 @@ object-fit:cover;
     font-family: Arial, sans-serif;
     min-width: 300px;
     border-style:solid;
-    border: 1px solid #ddd;
+    border: 1px solid #f5f5f5;
     border-radius:10px;
     padding:10px;
 
@@ -211,6 +216,7 @@ object-fit:cover;
 .review-text {
     font-size: 16px;
     color: #333;
+    font-family: inherit;
 }
 
 .review-details {
@@ -226,26 +232,39 @@ object-fit:cover;
 }
 
 .review-stars {
-    color: gold; /* Adjust for real star icons */
+    color: gold; 
 }
 
 .review-divider {
     width: 1px;
     height: 20px;
-    background-color: #ddd;
+    background-color: #f5f5f5;
 }
 
 .review-count a {
     color: black;
-    text-decoration: none;
-    font-size: 16px;
 }
 
 .review-count a:hover {
     text-decoration: underline;
 }
+/* Styling for the "Zanechaj hodnotenie" link */
+.rating-button {
+    font-size 16px;
+    color: #522c2c;
+    text-decoration: underline; 
+    cursor: pointer; 
+    font-family: inherit;
+}
+
+/* Hover effect */
+.rating-button:hover {
+    text-decoration: none;
+    color: #5c0000;
+}
 
 /* AVAILABILITY WIDGET */
+/* CHATGPT how do I fit this widgit in the same container as the review?  */
 .availability-widget {
     flex: 1; /* Makes it share space with the review container */
     min-width: 320px; /* Prevents it from getting too small */
@@ -255,6 +274,7 @@ object-fit:cover;
     border-radius: 10px;
     background: #f5f5f5;
     text-align: center;
+    font-family: inherit;
 }
 
 .availability-widget h2 {
@@ -267,7 +287,7 @@ object-fit:cover;
     flex-direction: column;
     gap: 10px;
 }
-
+/* CHATGPT what are all the css styles I need to include for styling the calendar widgit? */
 .date-selection {
     display: flex;
     justify-content: space-between;
@@ -361,7 +381,7 @@ button:hover {
     padding: 0;
     width: 100vw;
 }
-
+/* CHATGPT how do I make the cards scroll with a cusor on my website screen horizontally?*/
 .bnb-cards {
     display: flex;
     overflow-x: auto; /* Enables horizontal scrolling */
@@ -372,7 +392,7 @@ button:hover {
     white-space: nowrap; /* Prevents wrapping to a new row */
 }
 
-/* CHATGPT*/
+
 .bnb-cards::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Chrome, Safari */
 
@@ -383,19 +403,19 @@ button:hover {
     scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
-/* Modify .card to fit inside scrolling container */
+/* CHATGPT the cards aren't fitting in the container. How do I modify them so they fit?*/
 .card-content {
         max-width: 100%; /* Prevents content from overflowing */
         word-wrap: break-word; /* Ensures long words wrap properly */
         overflow: hidden; /* Hides any extra content that might overflow */
     }
     
-    /* Ensure the card itself does not expand beyond its limits */
+/* Ensure the card itself does not expand beyond its limits */
     .card {
         flex: 0 0 auto;
         width: 300px;
         max-width: 100%;
-        white-space: normal; /* CHATGPT*/
+        white-space: normal;
     }
 
 /* Ensure images inside cards don't stretch */
@@ -418,7 +438,16 @@ button:hover {
     margin-top: auto;
     padding-top: 1rem;
 }
-
+.card-button-layout .btn {
+    background-color: #2A646E; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
 /* Small adjustments for responsiveness */
 @media (min-width: 768px) {
     .bnb-cards {
@@ -430,46 +459,116 @@ button:hover {
     }
 }
 
+/* Rating Form Container */
+#rating-form {
+    background: #f5f5f5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: inherit;
+}
+
+/* Form Title */
+#rating-form h2 {
+    text-align: center;
+    color: #522c2c;
+    margin-bottom: 20px;
+    font-family: inherit;
+}
+
+/* Labels */
+#rating-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #522c2c;
+    font-family: inherit;
+}
+
+/* Dropdown (Star Rating) */
+#rating-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Sliders */
+#rating-form input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+/*CHATGPT how do I style the textarea?*/
+#rating-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    resize: vertical; /* Allows resizing up/down */
+}
+
+/* Submit Button */
+#rating-form button {
+    background-color: #522c2c;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
 
 /* Footer */
 footer {
 	background-color: #522c2c;
 	color: white;
 	padding: 2rem 0 1rem;
-
-}
-
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    }
+    
 .footer-container {
     display: flex;
     flex-direction: column;
-    border-style:solid;
+
 }
 
 .footer-section {
 	margin-bottom: 2rem;
 }
-
-.footer-section-tag-line {
-	color: #aaa;
-	margin-top: 0.5rem;
+.footer-section .logo{
+    justify-content:center;
+}
+.footer-section .logo img {
+    width: 60px; 
+    height: auto; 
 }
 
 .footer-links h3 {
 	font-size: 1.2rem;
 	margin-bottom: 1rem;
-}
-
-.footer-links ul {
-	list-style: none;
-}
-
-.footer-links li {
-	margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-	color: #ccc;
-	text-decoration: none;
+    font-family: inherit;
 }
 
 .social-placeholder {
