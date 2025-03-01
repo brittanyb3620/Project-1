@@ -10,6 +10,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+    <link rel="icon" type="image/png" href="./flowericon.png">
+
 </head>
 <body>
 
@@ -24,10 +26,20 @@
                 <a href="#">Ubytovanie</a>
                 <a href="#">Reštaurácia</a>
                 <a href="#">Aktivity v okolí</a>
-                <a href="#">Kontakt</a>
+    
+                <!-- CHATGPT can you create a dropdown hmtl menu for Kontakt? It should include email, phone a socialne siete -->
+                <div class="dropdown">
+                    <a href="#" class="nav-link">Kontakt</a>
+                    <div class="dropdown-content">
+                        <a href="">Email</a>
+                        <a href="">Mobil</a>
+                        <a href="#">Sociálne siete</a>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
+    
 
     <!-- Gallery Section -->
     <section class="gallery-section">
@@ -85,7 +97,7 @@
                         <input type="date" id="departure" name="departure">
                     </div>
                 </div>
-        
+        <!--CHATGPT could you create a dropdown menu for number of hostia? Have it go from 1 to 5+-->
                 <div class="guests-selection">
                     <label for="guests"><strong>HOSTIA</strong></label>
                     <select id="guests" name="guests">
@@ -124,7 +136,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Chata Penziónu</h3>
-                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <p>Chata Penzión je útulný horský penzión obklopený lesmi.</p>
                     <span class="card-location">Lokalita: Bratislava</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -140,7 +152,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Starý Penzión</h3>
-                    <p>Famous for its towering cliffs, waterfalls, and giant sequoia trees.</p>
+                    <p>Starý Penzión je historická budova s klasickým šarmom v centre mesta. </p>
                     <span class="card-location">Lokalita: Banská Bystrica</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -156,7 +168,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Penzión na Kopci</h3>
-                    <p>A breathtaking natural wonder carved by the Colorado River.</p>
+                    <p>Penzión na Kopci ponúka krásny výhľad na údolie z vrcholu kopca.</p>
                     <span class="card-location">Lokalita: Levoča</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -170,7 +182,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Penzión pri Vodopáde</h3>
-                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <p>Penzión pri Vodopáde je romantické miesto pri zurčiacom vodopáde.</p>
                     <span class="card-location">Lokalita: Banská Štiavnica</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -185,7 +197,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Malacky Penzión</h3>
-                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <p>Malacky Penzión je moderný penzión s výbornou dostupnosťou do Bratislavy.</p>
                     <span class="card-location">Lokalita: Malacky</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -199,7 +211,7 @@
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">Penzión Fiľakovo</h3>
-                    <p>Home to dramatic canyons, alpine rivers, and diverse wildlife.</p>
+                    <p>Penzión Fiľakovo ponúka výhľad na historický hrad Fiľakovo.</p>
                     <span class="card-location">Lokalita: Fiľakovo</span>
                     <div class="card-button-layout">
                         <button class="btn">Zistiť Cenu</button>
@@ -253,10 +265,14 @@
                     <div>
                         <a href="#">Privacy Policy</a>
                         <a href="#">Terms of Service</a>
+        <!--CHATGPT What would the html look like for a back to top button? don't worry about styling it.-->
+                        <a href="#" id="back-to-top">Back to Top</a>
                     </div>
                 </div>
             </div>
         </footer>
+
+
 </body>
 </html>
 

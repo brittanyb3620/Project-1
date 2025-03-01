@@ -56,6 +56,43 @@ nav {
     font-weight: bold;
     font-family: 'Aboreto', cursive;
 }
+/* Keep "Kontakt" looking like a normal nav link */
+.nav-links .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Ensures the dropdown appears below "Kontakt" */
+    left: 0;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /* Gallery Section */
 .gallery-section {
